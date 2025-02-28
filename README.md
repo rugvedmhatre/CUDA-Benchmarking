@@ -139,7 +139,7 @@ $$F [k, c, i, j] = (c + k) \cdot (i + j)$$
 - A tensor $I_0$ of sizes $C$, $W+2P$, $H+2P$ where $P=1$. $I_0$ is obtained from the tensor $I$ adding the padding rows and columns with the elements set to zero.
 - The output tensor $O$ with dimensions: $K$, $W$, $H$. Each pixel of the output tensor $O[k, x, y]$ is obtained as:
 
-$$ O[k, x, y] = \sum^{C-1}_{c=0} \sum^{FH-1}_{j=0} \sum^{FW-1}_{i=0} F[k, c, F W− 1− i, F H− 1− j] \cdot I_0[c, x + i, y + j]$$
+$$O[k, x, y] = \sum^{C-1}_{c=0} \sum^{FH-1}_{j=0} \sum^{FW-1}_{i=0} F[k, c, F W− 1− i, F H− 1− j] \cdot I_0[c, x + i, y + j]$$
 
 Note that we use the transpose of the filter in order to compute a convolution rather than a cross-correlation. 
 
